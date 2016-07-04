@@ -8,8 +8,8 @@ cronsys项目是一个关于crontab任务分发工具。
 ###特点[character]
 
  - 日志记录，记录每个crontab每次执行的时间，消耗时常，debug日志，执行状态
- - 执行前轮询探测各个work端（也就是各个接受crontab命令端服务器）的IP是否畅通，剔除僵尸IP服务器
- - 支持高并发，所以crontab命令高数量级的应用也不用担心（系统中应用了python的多进程的特性）
+ - 执行前轮询探测各个work端（也就是各个接受crontab命令端服务器）的IP是否畅通，剔除僵尸IP的服务器
+ - 支持高并发，非阻塞（防止进程卡死问题）
 
 ###技术应用[Application Technology]
 
@@ -47,9 +47,8 @@ Cron目录是整个项目核心
 ```
 nohup python xxx/cronsys/Gron/Gearman/woker.py &
 ```
-    如果worker端多机器部署时，将woker.py copy到你的目标服务上，修改这行代码gm_work =
-    gearman.GearmanWorker(['127.0.0.1:4730'])
-    中的IP与PORT为gearman部署的服务器IP与端口
+  
+    如果worker端多机器部署时，将woker.py copy到你的目标服务上，修改这行代码gm_work = gearman.GearmanWorker(['127.0.0.1:4730'])中的IP与PORT为gearman部署的服务器IP与端口
 
 注释：xxx为你的web目录
 
