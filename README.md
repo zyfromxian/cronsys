@@ -34,7 +34,7 @@ Cron目录是整个项目核心
  - MyLog.py -- 为系统记录日志代码（文本日志，主要是一些僵尸IP日录和一切异常监控）
  - run.log -- 系统日志
 
-###如何部署呢？
+###如何部署呢？[How to deploy]
 
 首先，在linux的crontab中添加
 
@@ -58,7 +58,7 @@ nohup python xxx/cronsys/Gron/Gearman/woker.py &
 注释：xxx为你的web目录
 
 
-###问答：<br/>
+###问答[Question]：<br/>
 为什么要用thinkphp？<br/>
 答：其实完全可以废弃tp框架，因为web端的代码量很小，这方面大家可以重构，为什么用呢？是因为我新公司在用tp，我刚好乘着这个学习一下。其实我对框架很不care。之后，我refine一下，剔除tp。
 
