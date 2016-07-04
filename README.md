@@ -42,7 +42,7 @@ Cron目录是整个项目核心
 */1 * * * * python xxx/cronsys/Gron/Gearman/client.py
 ```
 
- 2. 单机部署的话，直接执行
+ 3. 单机部署的话，直接执行
 
 ```
 nohup python xxx/cronsys/Gron/Gearman/woker.py &
