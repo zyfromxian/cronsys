@@ -8,9 +8,9 @@ cronsys项目是一个关于crontab任务分发工具。
 
 ###特点[character]
 
-(1)日志记录，记录每个crontab每次执行的时间，消耗时常，debug日志，执行状态
-(2)执行前轮询探测各个work端（也就是各个接受crontab命令端服务器）的IP是否畅通，剔除僵尸IP服务器
-(3)支持高并发，所以crontab命令高数量级的应用也不用担心（系统中应用了python的多进程的特性）
+*日志记录，记录每个crontab每次执行的时间，消耗时常，debug日志，执行状态
+*执行前轮询探测各个work端（也就是各个接受crontab命令端服务器）的IP是否畅通，剔除僵尸IP服务器
+*支持高并发，所以crontab命令高数量级的应用也不用担心（系统中应用了python的多进程的特性）
 
 
 ###技术应用[Application Technology]
