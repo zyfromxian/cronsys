@@ -3,9 +3,8 @@
 #介绍[brief]
 
 cronsys项目是一个关于crontab任务分发工具。
-不用再再Linux下配置crontab命令，也解决了多任务分布在多服务器上时配置过多。
-此系统目的是将分布在各个服务器上的crontab收集起来，统一部署到一台服务器上。
-这样便于管理。
+不用在Linux下配置crontab命令，也解决了多任务分布在多服务器上时配置过多，管理不宜的问题。
+此系统目的是将分布在各个服务器上的crontab收集起来，统一部署到一台服务器上，这样便于管理。
 
 #特点[character]
 
@@ -38,10 +37,10 @@ run.log -- 系统日志
 
 #如何部署呢？
 
-(1)在linux的crontab中添加 */1 * * * * python XXX/cronsys/Gron/Gearman/client.py   
-(2)单机部署的话，直接执行  nohup python XXX/cronsys/Gron/Gearman/woker.py &  
+(1)在linux的crontab中添加 */1 * * * * python xxx/cronsys/Gron/Gearman/client.py   
+(2)单机部署的话，直接执行  nohup python xxx/cronsys/Gron/Gearman/woker.py &  
 如果worker端多机器部署时，将woker.py copy到你的目标服务上，修改这行代码gm_work = gearman.GearmanWorker(['127.0.0.1:4730'])
 中的IP与PORT为gearman部署的服务器IP与端口
 
-注释：XXX为你的web目录
+注释：xxx为你的web目录
 
