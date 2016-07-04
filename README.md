@@ -49,7 +49,11 @@ nohup python xxx/cronsys/Gron/Gearman/woker.py &
 ```
 worker端多机器部署时 <br/>
 
-将woker.py copy到你的目标服务上，修改这行代码gm_work = gearman.GearmanWorker(['127.0.0.1:4730'])中的IP与PORT为gearman部署的服务器IP与端口
+将woker.py copy到你的目标服务上，修改这行代码gm_work = gearman.GearmanWorker(['127.0.0.1:4730'])中的IP与PORT为gearman部署的服务器IP与端口,然后执行
+
+```
+nohup python xxx/cronsys/Gron/Gearman/woker.py &
+```
 
 注释：xxx为你的web目录
 
