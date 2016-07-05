@@ -3,13 +3,13 @@
 ###介绍[brief]
 
 cronsys项目是一个关于crontab任务分发工具。<br/>
-不用在Linux下配置crontab命令，也解决了多任务分布在多服务器上时配置过多，管理不宜的问题。此系统目的是将分布在各个服务器上的crontab收集起来，统一部署到一台服务器上，这样便于管理。
+解决了不用在Linux下配置crontab命令，也解决了多任务分布在多服务器上时配置过多，管理不宜的问题。此系统目的是将分布在各个服务器上的crontab收集起来，统一部署到一台服务器上，以便于管理。
 
 ###特点[character]
 
- - 日志记录，记录每个crontab每次执行的时间，消耗时常，debug日志，执行状态
- - 执行前轮询探测各个work端（也就是各个接受crontab命令端服务器）的IP是否畅通，剔除僵尸IP的服务器
- - 支持高并发，非阻塞（防止进程卡死问题）
+ - 日志记录，记录每个crontab每次执行的时间，消耗时常，debug日志，执行状态。
+ - 执行前轮询探测各个work端（也就是各个接受crontab命令端服务器）的IP是否畅通，剔除僵尸IP的服务器。
+ - 支持高并发，非阻塞（防止进程卡死问题）。
 
 ###技术应用[Application Technology]
 
@@ -17,10 +17,10 @@ php python gearman mysql
 
 ###安装[Install]
 
- 1. 目录copy到你的web目录下
- 2. 运行Install/gearman/install.sh 脚本（运行前看看install有没有执行权限，没有执行chmod +x install.sh）
- 3. 将Install/database.sql 导入mysql中 （如果没有安装mysql，请自行安装）
- 4. 看看服务器是否安装php python mysl,没有安装，请自行安装，这里单独介绍
+ 1. 目录copy到你的web目录下。
+ 2. 运行Install/gearman/install.sh 脚本（运行前看看install有没有执行权限，没有执行chmod +x install.sh）。
+ 3. 将Install/database.sql 导入mysql中 （如果没有安装mysql，请自行安装）。
+ 4. 看看服务器是否安装php python mysl,没有安装，请自行安装，这里不再单独介绍。
 
 ###部署[Deploy]
 
